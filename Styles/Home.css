@@ -19,22 +19,24 @@
 .home-title{
   z-index: 1;
   text-align: end;
+  height: 200px;
 }
 .home-title h1 {
   color: white;
   font-size: 65px;
 }
 .home-title button {
+  margin-top: 10px;
   font-size: 20px;
   padding: 10px 10px;
   border: none;
   color: rgb(50, 49, 49);
-  border-radius: 10px;
   background-color: yellow;
-  transition: 1s;
+  transition: .2s;
 }
 
 .home-title button:hover{
+  border-radius: 10px;
 }
 
 .home-img {

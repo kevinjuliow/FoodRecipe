@@ -1,0 +1,29 @@
+.recipePage-container{
+  height: 100vh;
+  padding: 0 10%;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.recipePage-container h5 {
+  font-size: 40px;
+  display: block;
+}
+.recipePage-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+  margin: 0% 22.5%;
+  margin-top: 50px;
+}
+
+.recipePage-container ul li {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+/*=======================Recipe List=====================*/
+
