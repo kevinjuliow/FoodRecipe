@@ -39,7 +39,23 @@ const RecipeLists = [{
    type :'lunch',
   img : 'Assets/Recipe6.jpg'
 } , {
-  name : ''
+  name : 'Sweet-and-Sour Meatballs' ,
+  ingredients : '1 can (20 ounces) unsweetened pineapple chunks , 1 package (12 ounces) frozen fully cooked homestyle or Swedish meatballs thawed , 1 large green pepper cut into 1-inch pieces , 3 tablespoons cornstarch , 1/3 cup cold water , 3 tablespoons cider vinegar , 1 tablespoon soy sauce , 1/2 cup packed brown sugar' 
+  ,directions : 'Drain pineapple, reserving juice. Set pineapple aside. Add enough water to juice if needed to measure 1 cup. In a large skillet over medium heat, cook the meatballs, green pepper and juice mixture until heated through. , In a small bowl, combine the cornstarch, cold water, vinegar and soy sauce until smooth. Add brown sugar and reserved pineapple to the pan; stir in cornstarch mixture. Bring to a boil; cook and stir until thickened, about 2 minutes. If desired, serve with rice and top with green onions.' ,
+  type :'dinner' ,
+  img :'Assets/Recipe7.jpg'
+} , {
+  name : 'Air-Fryer Chicken Parmesan' ,
+  ingredients : '2 large eggs ,1/2 cup seasoned bread crumbs , 1/3 cup grated Parmesan cheese , 1/4 teaspoon pepper , 4 boneless skinless chicken breast halves (6 ounces each) , 1 cup pasta sauce , 1 cup shredded mozzarella cheese ' 
+  ,directions : 'Preheat air fryer to 375°. In a shallow bowl, lightly beat eggs. In another shallow bowl, combine bread crumbs, Parmesan cheese and pepper. Dip chicken in egg, then coat with crumb mixture. ,Place chicken in a single layer on greased tray in air-fryer basket. Cook until a thermometer reads 165°, 10-12 minutes, turning halfway through. Top chicken with sauce and mozzarella. Cook until cheese is melted, 3-4 minutes longer. If desired, sprinkle with chopped basil and additional Parmesan cheese and serve with pasta. ' ,
+  type :'dinner' ,
+  img :'Assets/Recipe8.jpg'
+} , {
+  name : 'Garlic Lime Salmon' ,
+  ingredients : '1/2 cup canola oil , 1 medium onion, finely chopped , 1 teaspoon grated lime zest , 2 tablespoons lime juice , 1 garlic clove, minced , 2 salmon fillets (about 1-1/2 pounds each)' 
+  ,directions : 'Preheat broiler. In a small bowl, mix the first 5 ingredients. Place salmon fillets on a broiler pan, skin side down. Broil 4-6 in. from heat until fish just begins to flake easily with a fork, 15-20 minutes. Brush frequently with onion mixture during the last 5 minutes of cooking.' ,
+  type :'dinner' ,
+  img :'Assets/Recipe9.jpg'
 }]
 
 
