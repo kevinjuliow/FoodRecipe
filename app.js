@@ -38,6 +38,8 @@ const RecipeLists = [{
   ,directions : 'Preheat oven to 350°. In a large skillet, cook and crumble beef with pepper and onion over medium-high heat until no longer pink, 5-7 minutes; drain. Stir in pizza sauce, pepperoni and oregano. , Spoon 1/2 cup mixture across center of each tortilla; top with a piece of string cheese. Fold bottom and sides of tortilla over filling and roll up. , Place on an ungreased baking sheet, seam side down. Bake until heated through, about 10 minutes.', 
    type :'lunch',
   img : 'Assets/Recipe6.jpg'
+} , {
+  name : ''
 }]
 
 
