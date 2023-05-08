@@ -59,10 +59,11 @@ const RecipeLists = [{
 }]
 
 
-const recipeList = document.querySelector('.recipeList-container')
+const recipeListContainer = document.querySelector('.recipeList-container')
 const breakfast = document.querySelector('.breakfast')
 const lunch = document.querySelector('.lunch')
 const dinner = document.querySelector('.dinner')
+
 
 
 
@@ -79,6 +80,6 @@ RecipeLists.map((e)=>{
     newP.style.textAlign = 'center'
     newDiv.append(img)
     newDiv.append(newP)
-    recipeList.append(newDiv)
+    recipeListContainer.append(newDiv)
   }
 })
