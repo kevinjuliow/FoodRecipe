@@ -68,18 +68,42 @@ const dinner = document.querySelector('.dinner')
 
 
 RecipeLists.map((e)=>{
-  if (e.type === 'breakfast'){
-    const newDiv = document.createElement('div')
-    breakfast.style.borderBottom = '1px solid black'
-    const img = document.createElement('img')
-    img.setAttribute('src' , e.img)
-    const newP = document.createElement('p')
-    newP.innerHTML = e.name
-    img.style.width = '100%'
-    img.style.borderRadius = '10px'
-    newP.style.textAlign = 'center'
-    newDiv.append(img)
-    newDiv.append(newP)
-    recipeListContainer.append(newDiv)
+  
+  const setDiv = () =>{
+      const newDiv = document.createElement('div')
+      breakfast.style.borderBottom = '1px solid black'
+      const img = document.createElement('img')
+      img.setAttribute('src' , e.img)
+      const newP = document.createElement('p')
+      newP.innerHTML = e.name
+      img.style.width = '100%'
+      img.style.borderRadius = '10px'
+      newP.style.textAlign = 'center'
+      newDiv.append(img)
+      newDiv.append(newP)
+      recipeListContainer.append(newDiv)
   }
+
+  if (e.type === 'breakfast'){
+    breakfast.addEventListener('click' , setDiv())
+  } 
+  
+  
+  lunch.addEventListener('click' , ()=>{
+      if (e.type === 'lunch'){
+        breakfast.removeEventListener();
+        const newDiv = document.createElement('div')
+        breakfast.style.borderBottom = '1px solid black'
+        const img = document.createElement('img')
+        img.setAttribute('src' , e.img)
+        const newP = document.createElement('p')
+        newP.innerHTML = e.name
+        img.style.width = '100%'
+        img.style.borderRadius = '10px'
+        newP.style.textAlign = 'center'
+        newDiv.append(img)
+        newDiv.append(newP)
+        recipeListContainer.append(newDiv)
+      }
+  })
 })
