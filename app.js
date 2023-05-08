@@ -1,3 +1,15 @@
+//NavBar 
+const header = document.querySelector('header');
+const ul = document.querySelector('header ul')
+const navImg = document.querySelector('.navImg')
+
+window.addEventListener('scroll' , ()=>{
+  header.classList.toggle('scrolled' , scrollY > 1)
+  ul.style.color = 'white'
+  navImg.removeAttribute('src')
+  navImg.setAttribute('src' , "Assets/logo-white")
+})
+
 //Objects
 const RecipeLists = [{
   name : 'Breakfast Sweet Potatoes',
@@ -86,6 +98,7 @@ function displayBreakfastRecipes() {
       newDiv.append(img)
       newDiv.append(newP)
       recipeListContainer.append(newDiv)
+      newDiv.style.cursor = 'pointer'
     }
   })
   
@@ -115,6 +128,7 @@ function displayLunchRecipes() {
       newDiv.append(img)
       newDiv.append(newP)
       recipeListContainer.append(newDiv)
+      newDiv.style.cursor = 'pointer'
     }
   })
 
@@ -122,3 +136,31 @@ function displayLunchRecipes() {
 
 lunch.addEventListener('click', displayLunchRecipes)
 
+function displayDinnerRecipes() {
+  while (recipeListContainer.firstChild){
+    recipeListContainer.removeChild(recipeListContainer.firstChild)
+  }
+  RecipeLists.map((e)=>{
+    if (e.type === 'dinner'){
+      const newDiv = document.createElement('div')
+      breakfast.style.borderBottom = 'none'
+      lunch.style.borderBottom = 'none'
+      dinner.style.borderBottom = '1px solid black'
+      const img = document.createElement('img')
+      const newP = document.createElement('p')
+      img.innerHTML = e.img
+      img.setAttribute('src', e.img)
+      newP.innerHTML = e.name
+      img.style.width = '100%'
+      img.style.borderRadius = '10px'
+      newP.style.textAlign = 'center'
+      newDiv.append(img)
+      newDiv.append(newP)
+      recipeListContainer.append(newDiv)
+      newDiv.style.cursor = 'pointer'
+    }
+  })
+
+}
+
+dinner.addEventListener('click', displayDinnerRecipes)
