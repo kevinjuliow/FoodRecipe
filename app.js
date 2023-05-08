@@ -65,16 +65,20 @@ const lunch = document.querySelector('.lunch')
 const dinner = document.querySelector('.dinner')
 
 
-
-
-RecipeLists.map((e)=>{
-  
-  const setDiv = () =>{
+function displayBreakfastRecipes() {
+  while (recipeListContainer.firstChild){
+    recipeListContainer.removeChild(recipeListContainer.firstChild)
+  }
+  RecipeLists.map((e)=>{
+    if (e.type === 'breakfast'){
       const newDiv = document.createElement('div')
+      lunch.style.borderBottom = 'none'
+      dinner.style.borderBottom = 'none'
       breakfast.style.borderBottom = '1px solid black'
       const img = document.createElement('img')
-      img.setAttribute('src' , e.img)
       const newP = document.createElement('p')
+      img.innerHTML = e.img
+      img.setAttribute('src', e.img)
       newP.innerHTML = e.name
       img.style.width = '100%'
       img.style.borderRadius = '10px'
@@ -82,28 +86,39 @@ RecipeLists.map((e)=>{
       newDiv.append(img)
       newDiv.append(newP)
       recipeListContainer.append(newDiv)
-  }
-
-  if (e.type === 'breakfast'){
-    breakfast.addEventListener('click' , setDiv())
-  } 
-  
-  
-  lunch.addEventListener('click' , ()=>{
-      if (e.type === 'lunch'){
-        breakfast.removeEventListener();
-        const newDiv = document.createElement('div')
-        breakfast.style.borderBottom = '1px solid black'
-        const img = document.createElement('img')
-        img.setAttribute('src' , e.img)
-        const newP = document.createElement('p')
-        newP.innerHTML = e.name
-        img.style.width = '100%'
-        img.style.borderRadius = '10px'
-        newP.style.textAlign = 'center'
-        newDiv.append(img)
-        newDiv.append(newP)
-        recipeListContainer.append(newDiv)
-      }
+    }
   })
-})
+  
+}
+
+breakfast.addEventListener('click', displayBreakfastRecipes);
+
+
+function displayLunchRecipes() {
+  while (recipeListContainer.firstChild){
+    recipeListContainer.removeChild(recipeListContainer.firstChild)
+  }
+  RecipeLists.map((e)=>{
+    if (e.type === 'lunch'){
+      const newDiv = document.createElement('div')
+      breakfast.style.borderBottom = 'none'
+      dinner.style.borderBottom = 'none'
+      lunch.style.borderBottom = '1px solid black'
+      const img = document.createElement('img')
+      const newP = document.createElement('p')
+      img.innerHTML = e.img
+      img.setAttribute('src', e.img)
+      newP.innerHTML = e.name
+      img.style.width = '100%'
+      img.style.borderRadius = '10px'
+      newP.style.textAlign = 'center'
+      newDiv.append(img)
+      newDiv.append(newP)
+      recipeListContainer.append(newDiv)
+    }
+  })
+
+}
+
+lunch.addEventListener('click', displayLunchRecipes)
+
