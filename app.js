@@ -3,12 +3,9 @@ const header = document.querySelector('header');
 const ul = document.querySelector('header ul')
 const navImg = document.querySelector('.navImg')
 
-window.addEventListener('scroll' , ()=>{
-  header.classList.toggle('scrolled' , scrollY > 1)
-  ul.style.color = 'white'
-  navImg.removeAttribute('src')
-  navImg.setAttribute('src' , "Assets/logo-white")
-})
+// window.addEventListener('scroll' , ()=>{
+//   header.classList.toggle('scrolled' , scrollY > 1)
+// })
 
 //Objects
 const RecipeLists = [{
@@ -77,6 +74,31 @@ const lunch = document.querySelector('.lunch')
 const dinner = document.querySelector('.dinner')
 
 
+const handleClick = (e) =>{
+  const article = document.createElement('article')
+        const h4 = document.createElement('h4')
+        const ingredient = document.createElement('p')
+        const directions = document.createElement('p')
+
+        h4.innerHTML = e.name 
+        ingredient.innerHTML = "ingredients : "+e.ingredients
+        directions.innerHTML = 'Directions : '+e.directions
+
+        article.append(h4)
+        article.append(ingredient)
+        article.append(directions)
+        article.classList.add('recipes')
+        recipeListContainer.append(article)
+
+        const xBtn = document.createElement('h1')
+        xBtn.innerHTML = "X"
+        xBtn.classList.add('recipe-xBtn')
+        article.append(xBtn)
+
+        xBtn.addEventListener('click' , ()=>{
+          article.remove()
+        })
+}
 function displayBreakfastRecipes() {
   while (recipeListContainer.firstChild){
     recipeListContainer.removeChild(recipeListContainer.firstChild)
@@ -99,12 +121,18 @@ function displayBreakfastRecipes() {
       newDiv.append(newP)
       recipeListContainer.append(newDiv)
       newDiv.style.cursor = 'pointer'
+      newDiv.classList.add('gridRecipeContainer')
+
+      newDiv.addEventListener('click', ()=>{
+        handleClick(e)
+      })
     }
   })
   
 }
-
+displayBreakfastRecipes()
 breakfast.addEventListener('click', displayBreakfastRecipes);
+
 
 
 function displayLunchRecipes() {
@@ -129,6 +157,11 @@ function displayLunchRecipes() {
       newDiv.append(newP)
       recipeListContainer.append(newDiv)
       newDiv.style.cursor = 'pointer'
+      newDiv.classList.add('gridRecipeContainer')
+
+      newDiv.addEventListener('click', ()=>{
+        handleClick(e)
+      })
     }
   })
 
@@ -158,6 +191,11 @@ function displayDinnerRecipes() {
       newDiv.append(newP)
       recipeListContainer.append(newDiv)
       newDiv.style.cursor = 'pointer'
+      newDiv.classList.add('gridRecipeContainer')
+
+      newDiv.addEventListener('click', ()=>{
+        handleClick(e)
+      })
     }
   })
 

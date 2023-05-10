@@ -36,3 +36,52 @@
   grid-template-columns: 0.8fr 0.8fr 0.8fr;
   gap: 1%;
 }
+
+
+/*On Click Recipe List*/
+.gridRecipeContainer{
+  animation: gridAnimation .5s;
+}
+.recipes{
+  position: absolute ;
+  width: 80%;
+  background-color: rgb(176, 216, 250);
+  padding: 8% 10%;
+  height: 500px;
+  animation: inAnimation .2s ;
+}
+.recipes h4 {
+  font-size: 20px;
+}
+.recipes p{
+  margin: 4% 13%;
+}
+
+
+.recipe-xBtn{
+  position: absolute;
+  right: 10% ;
+  top: 10%;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  100%{
+    opacity: 1;
+    height: 500px;
+  }
+}
+
+@keyframes gridAnimation {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
