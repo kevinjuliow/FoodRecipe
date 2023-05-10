@@ -40,7 +40,7 @@
 
 /*On Click Recipe List*/
 .gridRecipeContainer{
-  animation: gridAnimation .5s;
+  animation: gridAnimation .4s;
 }
 .recipes{
   position: absolute ;
@@ -79,9 +79,7 @@
 
 @keyframes gridAnimation {
   0%{
-    width: 0;
+    transform: translate(120% , 0%);
   }
-  100%{
-    width: 100%;
-  }
+
 }

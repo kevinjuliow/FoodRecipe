@@ -1,11 +1,19 @@
-//NavBar 
+//NavBar Events
 const header = document.querySelector('header');
 const ul = document.querySelector('header ul')
 const navImg = document.querySelector('.navImg')
 
-// window.addEventListener('scroll' , ()=>{
-//   header.classList.toggle('scrolled' , scrollY > 1)
-// })
+window.addEventListener('scroll' , ()=>{
+  header.classList.toggle('scrolled' , scrollY > 1)
+  ul.classList.toggle('ulScrolled' , scrollY > 1)
+  if (window.scrollY > 1) {
+    navImg.src = "Assets/logo-white.png";
+  } else {
+    navImg.src = "Assets/logo-black.png";
+  }
+})
+
+
 
 //Objects
 const RecipeLists = [{
@@ -73,7 +81,7 @@ const breakfast = document.querySelector('.breakfast')
 const lunch = document.querySelector('.lunch')
 const dinner = document.querySelector('.dinner')
 
-
+//function to handle the click Events on each div element recipes
 const handleClick = (e) =>{
   const article = document.createElement('article')
         const h4 = document.createElement('h4')
