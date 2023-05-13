@@ -13,7 +13,15 @@ window.addEventListener('scroll' , ()=>{
   }
 })
 
-
+const navUl = document.querySelector('nav ul')
+const xBtnNav = document.querySelector('.NavXBtn')
+xBtnNav.addEventListener('click' , ()=>{
+  navUl.style.display = 'none'
+})
+const hamburger = document.querySelector('.material-symbols-outlined')
+hamburger.addEventListener('click' , ()=>{
+  navUl.style.display = 'block'
+})
 
 //Objects
 const RecipeLists = [{

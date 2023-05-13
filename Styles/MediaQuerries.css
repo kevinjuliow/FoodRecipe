@@ -26,7 +26,31 @@
 }
 
 
-@media screen and (max-width : 420px){
+@media screen and (max-width : 577px){
+    /*=======Nav Bar Responsive Hamburger Menu==========*/
+  nav ul {
+    flex-direction: column;
+    background-color: rgba(118, 133, 133, 0.984);
+    height: 350px;
+    top: 0;
+    justify-content: end;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  .NavXBtn{
+    position: absolute;
+    right: 1%;
+    top: 0%;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+  }
+  .material-symbols-outlined{
+    display: block;
+  }
+
+
    /*===============Home Pages===================*/
   .home-title{
     margin-top : 0
@@ -54,4 +78,5 @@
       margin: 0% 0%;
       font-size: 11px;
     }
+
 }

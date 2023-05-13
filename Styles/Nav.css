@@ -45,3 +45,17 @@ nav ul li:hover {
 .ulScrolled{
   color: white;
 }
+
+
+.NavXBtn{
+  position: absolute;
+  right: 1%;
+  bottom: 40%;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+.material-symbols-outlined{
+  display: none;
+}
