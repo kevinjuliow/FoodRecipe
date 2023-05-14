@@ -37,6 +37,7 @@
     position: absolute;
     width: 100%;
     left: 0;
+    display: none;
   }
   .NavXBtn{
     position: absolute;
@@ -55,6 +56,9 @@
   .home-title{
     margin-top : 0
     ; height: 0;
+  }
+  .home-title h1 {
+    font-size: 50px;
   }
   .home-img{
     width: 80%;

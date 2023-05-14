@@ -13,15 +13,33 @@ window.addEventListener('scroll' , ()=>{
   }
 })
 
+
+//Hamburger Menu
 const navUl = document.querySelector('nav ul')
 const xBtnNav = document.querySelector('.NavXBtn')
-xBtnNav.addEventListener('click' , ()=>{
-  navUl.style.display = 'none'
-})
 const hamburger = document.querySelector('.material-symbols-outlined')
+
+function handleResize() {
+  if (window.innerWidth <= 576) {
+    navUl.style.display = 'none';
+  } else {
+    navUl.style.display = 'flex';
+  }
+}
+
 hamburger.addEventListener('click' , ()=>{
-  navUl.style.display = 'block'
+  navUl.style.display = 'flex'
 })
+xBtnNav.addEventListener('click' , ()=>{
+    navUl.style.display = 'none'
+})
+
+window.addEventListener('resize', handleResize);
+
+
+
+
+
 
 //Objects
 const RecipeLists = [{
