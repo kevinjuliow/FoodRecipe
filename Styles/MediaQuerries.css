@@ -38,6 +38,16 @@
     width: 100%;
     left: 0;
     display: none;
+    animation : navHambAnimation .4s;
+  }
+  @keyframes navHambAnimation {
+    0%{
+      opacity: 0;
+      height: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
   .NavXBtn{
     position: absolute;
@@ -49,6 +59,7 @@
   }
   .material-symbols-outlined{
     display: block;
+    cursor: pointer;
   }
 
 
@@ -76,11 +87,11 @@
     }
 
     .recipes{
-      height: 600px;
+      height: 480px;
     }
     .recipes p {
       margin: 0% 0%;
-      font-size: 11px;
+      font-size: 10px;
     }
 
 }

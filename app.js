@@ -2,14 +2,17 @@
 const header = document.querySelector('header');
 const ul = document.querySelector('header ul')
 const navImg = document.querySelector('.navImg')
+const hamburger = document.querySelector('.material-symbols-outlined')
 
 window.addEventListener('scroll' , ()=>{
   header.classList.toggle('scrolled' , scrollY > 1)
   ul.classList.toggle('ulScrolled' , scrollY > 1)
   if (window.scrollY > 1) {
     navImg.src = "Assets/logo-white.png";
+    hamburger.style.color = 'white'
   } else {
     navImg.src = "Assets/logo-black.png";
+    hamburger.style.color = 'black'
   }
 })
 
@@ -17,7 +20,7 @@ window.addEventListener('scroll' , ()=>{
 //Hamburger Menu
 const navUl = document.querySelector('nav ul')
 const xBtnNav = document.querySelector('.NavXBtn')
-const hamburger = document.querySelector('.material-symbols-outlined')
+
 
 function handleResize() {
   if (window.innerWidth <= 576) {
